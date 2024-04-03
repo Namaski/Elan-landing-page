@@ -1,0 +1,42 @@
+/*Dark mode simple*/
+
+
+.dark-mode #dark-mode-toggle {
+    border: solid 1px rgba(255, 255, 255, 0.500);
+}
+
+.dark-mode * {
+    background-color: rgb(27, 26, 25);
+    background: rgb(27, 26, 25);
+    color: white;
+}
+
+
+.dark-mode #first-page {
+    background: rgb(27, 26, 25);
+
+}
+
+
+.dark-mode #how-it-works *{
+    background-color: rgb(41, 40, 39);
+    background: rgb(41, 40, 39);
+}
+
+.dark-mode .products * {
+    background: rgb(41, 40, 39);
+    background-color: rgb(41, 40, 39);
+}
+
+
+.dark-mode .parallax {
+    background-image: url('../img/parallax-lowbrightness.png');
+}
+
+.dark-mode .parallax *{
+    background: none;
+}
+
+.parallax a:hover {
+    background: rgba(255, 255, 255, .17);
+}

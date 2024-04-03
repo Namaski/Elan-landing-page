@@ -1,0 +1,1182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* IL FAUT ACTIVER L'OPTION ENABLE SMOOTH SCROLLING SUR EDGE */
+
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.gray-text {
+    color: gray;
+}
+
+article {
+    padding: 1em 5%;
+}
+
+ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+h2 {
+    color: #1e1e1e;
+}
+
+img {
+    vertical-align: bottom;
+}
+
+/************************* HEADER ***********************************/
+
+
+#first-page {
+    background: radial-gradient(#8bc3f5, #1294b8);
+    height: 100svh;
+    margin-bottom: 2%;
+    position: relative;
+}
+
+.logo {
+    color: #fff;
+    font-size: 1.6em;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    color: #fff;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav {
+    width: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#dark-mode-toggle {
+    width: 1.4em;
+    height: 1.4em;
+    background: none;
+    border: solid rgba(0, 0, 0, 0.500) 1px;
+    border-radius: 200px;
+    margin: 0 1em 0 0;
+    color: rgba(0, 0, 0, 0.700);
+    font-size: 3em;    
+}
+
+nav ul {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    font-size: 1em;
+    margin: .3em;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+nav ul li a:hover {
+    color: #bababa;
+}
+
+.social-media {
+    width: 11%;
+    font-size: 1.6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+/* MENU HAMBURGER */
+
+
+@media only screen and (max-device-width :768px) {
+    /*PRESET*/
+
+
+    nav {
+        display: block
+    }
+
+    .social-media {
+        display: none
+    }
+
+    .mobile-nav {
+        width: 100%;
+
+    }
+
+    #first-page {
+        margin: 0;
+        padding: 0
+    }
+
+    /*MENU ICON*/
+
+
+    .navbar-toggle {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 20px
+    }
+
+    .navbar-icon {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column
+    }
+
+    .navbar-icon div {
+        width: 3em;
+        height: .5em;
+        margin: .1em;
+        background-color: #fff;
+        border-radius: 200px 200px 200px 200px;
+        -webkit-border-radius: 200px 200px 200px 200px;
+        -moz-border-radius: 200px 200px 200px 200px
+    }
+
+    /*NAVIGATION MENU*/
+
+
+
+    .navbar-menu {
+        display: none
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        flex-direction: column;
+        align-items: end
+    }
+
+    /*STYLE MENU*/
+
+
+    .navbar-menu {
+        width: 95%
+    }
+
+    .navbar-menu li {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        line-height: 300%;
+        font-size: 1.6em;
+        font-weight: 500;
+        width: 60%;
+        background-color: rgba(0, 0, 0, .9);
+        border-left: 2px solid #1294b8ae;
+        border-right: 2px solid #1294b8ae;
+        border-top: 2px solid #1294b8ae
+    }
+
+    .navbar-menu>:first-child {
+        border-radius: 30px 30px 0 0
+    }
+
+    .navbar-menu>:last-child {
+        border-radius: 0 0 30px 30px;
+        border-bottom: 2px solid #1294b8ae
+    }
+
+    .navbar-menu a {
+        display: flex;
+        justify-content: flex-end
+    }
+}
+
+/***************************************FIRST ARTICLE ******************************/
+
+
+.welcome-page {
+    min-height: inherit;
+    /*Lorsque que l'élément parent à la propriété min-height la valeur de référence est 0 ou null pour max-height il faut dont inherit l'height pour remplir l'espace restant*/
+    display: flex;
+    justify-content: space-between;
+    margin: 10em auto 0 auto;
+}
+
+.welcome-page div {
+    width: 40%;
+    margin: auto 0
+}
+
+.welcome-page div h2 {
+    font-size: 3.5rem;
+    margin-bottom: 3vh
+}
+
+.welcome-page div p {
+    font-size: 1.3em;
+    margin-bottom: 3vh
+}
+
+.welcome-page form {
+    position: relative
+}
+
+.welcome-page form input {
+    background-color: #ffffffc5;
+    color: #555;
+    font-size: 1em;
+    padding-left: 1.5em;
+    width: 100%;
+    height: 3.5em;
+    border-radius: 20px;
+    border: none
+}
+
+.welcome-page form button {
+    background-color: #1294b8;
+    position: absolute;
+    font-size: 1em;
+    top: 50%;
+    right: .3em;
+    transform: translateY(-50%);
+    width: 9em;
+    height: 3em;
+    border-radius: 20px;
+    color: #fff;
+    border: none;
+    cursor: pointer
+}
+
+.welcome-page figure {
+    margin: auto 0;
+    width: 50%
+}
+
+/***************************************Products Features ******************************/
+
+
+#products-features {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+.products {
+    display: flex
+}
+
+#products-features .gray-text {
+    width: 40%;
+    margin: .5em auto 2em auto
+}
+
+.products div {
+    background: radial-gradient(#8bc3f5, #1294b8);
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 20px;
+    height: 20em;
+    transition: ease .5s
+}
+
+#products-features div div:hover {
+    margin-top: 0
+}
+
+#products-features div div h2,
+#products-features div div p {
+    margin: 1.5em
+}
+
+#products-features div div i {
+
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+/***************************************HOW IT WORKS ******************************/
+
+
+#how-it-works {
+    min-height: 40vh;
+    background-color: rgba(128, 128, 128, .128);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center
+}
+
+#how-it-works h2 {
+    margin: 0 0 2em 0
+}
+
+#how-it-works .gray-text {
+    width: 80%;
+    margin: 0 auto
+}
+
+/***************************************OUR TEAM ******************************/
+
+
+#our-team {
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+#our-team h2 {
+    width: 50%;
+    margin: 0 auto
+}
+
+#our-team>.gray-text {
+    margin: 2em auto 4em auto;
+    width: 80%
+}
+
+.team-list {
+    display: flex;
+    justify-content: space-evenly
+}
+
+.team-list>div p {
+    display: flex;
+    flex-direction: column
+}
+
+.team-list figure {
+    width: 15em;
+    height: 15em;
+    border-radius: 200px;
+    position: relative;
+    overflow: hidden
+}
+
+.team-list figure ul {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    transition: ease 1s
+}
+
+.team-list figure ul li {
+    font-size: 1.5em;
+    background-color: #fff;
+    border-radius: 200px;
+    margin-bottom: 1vh
+}
+
+.team-list img {
+    width: 15em;
+    height: 15em;
+    border-radius: 200px;
+    filter: grayscale(100%);
+    transition: ease 1s
+}
+
+.team-list figure:hover ul {
+    top: 20%;
+    left: 10%
+}
+
+.team-list figure:hover img {
+    transform: scale(1.1);
+    filter: none
+}
+
+/***************************************GET STARTED ******************************/
+
+
+#get-started {
+    padding: 0;
+    min-height: 60vh
+}
+
+.parallax {
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/parallax-lowbrightness.png');
+    background-attachment: fixed;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.parallax>div {
+    text-align: center;
+    color: #fff
+}
+
+.parallax h2 {
+    font-size: 2.5em;
+    margin-bottom: .5em
+}
+
+.parallax p {
+    font-size: 1em;
+    color: #e0e0e0;
+    margin-bottom: 5em
+}
+
+.parallax a {
+    display: flex;
+    border: 2px solid #fff;
+    width: 8em;
+    height: 3em;
+    margin: 0 auto;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    cursor: pointer
+}
+
+.parallax a:hover {
+    background: rgba(255, 255, 255, .17);
+    border: 2px solid #bababa;
+    color: #ebebeb
+}
+
+/***************************************CLIENTS ******************************/
+
+
+#clients {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+#clients>h2 {
+    font-size: 3em;
+    margin-bottom: 1em
+}
+
+#clients>p {
+    text-align: center;
+    font-size: 1.6em;
+    width: 50%;
+    margin-bottom: 5em
+}
+
+.slider-clients-container {
+    width: 100%
+}
+
+.clients-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around
+}
+
+.clients-list div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+.clients-list figure {
+    width: 10em;
+    filter: opacity(50%);
+    transition: ease 1s
+}
+
+.clients-list figure>img {
+    width: 10em
+}
+
+.clients-list figure:hover {
+    filter: opacity(100%);
+    transform: scale(1.5)
+}
+
+/***************************************PRICING ******************************/
+
+
+#pricing {
+    padding: 0;
+    margin-bottom: 5em
+}
+
+.pricing-top {
+    padding: 0 5%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center
+}
+
+.pricing-top>div {
+    width: 50%;
+    overflow: hidden
+}
+
+.pricing-top div:first-child {
+    width: 50%
+}
+
+.pricing-top img {
+    width: 100%
+}
+
+.pricing-top>div>h2,
+.pricing-top>div>p {
+    margin: 0 0 1em 0
+}
+
+#pricing>div>div>p {
+    width: 90%
+}
+
+.key-number {
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #000
+}
+
+.pricing-top .gray-text {
+    display: flex;
+    flex-direction: column
+}
+
+.pricing-top a {
+    display: flex;
+    height: 3em;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #4d86cb
+}
+
+.pricing-top a:hover {
+    background-color: #82a2c8
+}
+
+.pricing-top>div>div {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em
+}
+
+/*PRICING BOTTOM */
+
+
+.pricing-bottom {
+    background-color: #f3f3f3;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column
+}
+
+.pricing-bottom>div {
+    margin-top: 1em
+}
+
+.pricing-bottom>div>h2,
+.pricing-bottom>div>p {
+    text-align: center;
+    margin: 0 auto
+}
+
+.pricing-bottom>div>p {
+    margin-bottom: 3em
+}
+
+.formule-container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex
+}
+
+.formule {
+    background-color: #fff;
+    position: relative;
+    border-radius: 20px;
+    width: 81%;
+    margin: 2em;
+    box-shadow: 4px 8px 14px 4px rgba(0, 0, 0, .75);
+    -webkit-box-shadow: 4px 8px 14px 4px rgba(0, 0, 0, .75);
+    -moz-box-shadow: 4px 8px 14px 4px rgba(0, 0, 0, .75);
+    transition: ease 1s
+}
+
+.hightlight {
+    margin: 0 1em 4em 1em
+}
+
+.promo {
+    margin: 0 1em 4em 1em
+}
+
+.formule>h2,
+.formule>p {
+    text-align: center
+}
+
+.formule>p {
+    margin-bottom: 3em
+}
+
+.formule>p span {
+    font-size: 3em;
+    color: #4d86cb
+}
+
+#reduc {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0 20px 0 20px;
+    color: rgba(255, 255, 255, .815);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #416fc9;
+    position: absolute;
+    right: 0
+}
+
+.formule ul {
+    margin-bottom: 5 em
+}
+
+.formule ul li {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 1em
+}
+
+.fa-check {
+    color: #9ec984;
+    border: 1px solid #9ec984;
+    border-radius: 200px
+}
+
+.fa-x {
+    color: #af0000;
+    border: 1px solid #af0000;
+    border-radius: 200px
+}
+
+.formule ul li p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3px
+}
+
+.formule button {
+    display: block;
+    width: 90%;
+    margin: 1em auto;
+    height: 3em;
+    background-color: #416fc9;
+    color: #fff;
+    border: none;
+    cursor: pointer
+}
+
+/***************************************BLOG ******************************/
+
+
+#blog-section {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: space-between;
+    margin: 10em auto;
+    padding: 0 5%
+}
+
+.blog-container {
+    margin: 2em 1em;
+    position: relative
+}
+
+
+.blog-container img {
+    width: 25em;
+    transition: ease 1s
+}
+
+.hide-autor {
+    top: 0;
+    margin: 1em;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 5s, opacity 1s linear
+}
+
+.blog:hover img {
+    filter: brightness(60%)
+}
+
+.blog:hover+.hide-autor {
+    visibility: visible;
+    opacity: 1
+}
+
+.blog-container h2 {
+    margin: .5em 0
+}
+
+.blog-container p {
+    color: gray;
+    margin-bottom: .5em;
+    font-size: 1.3em
+}
+
+.blog-container .hide-autor>ul>li>p {
+    color: #fff
+}
+
+.blog-container a {
+    color: #4d86cb;
+    font-size: 1.3em
+}
+
+/******************************************************FOOTER  *********************************************/
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 30vh;
+    background-color: #26272b;
+    color: #56575b;
+    font-size: 1.6em
+}
+
+footer a {
+    color: #56575b
+}
+
+footer a:hover {
+    color: #7a7c84
+}
+
+footer div {
+    display: flex;
+    justify-content: center
+}
+
+.fa-brands {
+    font-size: 1em;
+    margin: .3em .4em
+}
+
+.brands-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2em;
+    width: 2em;
+    border: 1px solid #56575b;
+    border-radius: 200px;
+    margin: 1em
+}
+
+.brands-container:hover {
+    background-color: rgba(133, 136, 148, .3);
+    border: 1px solid #7a7c84
+}
+
+/******************************************************BACK TO TOP*********************************************/
+
+
+.back-to-top {
+    width: 4em;
+    height: 4em;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #b5e4f9;
+    padding: .5rem;
+    text-decoration: none;
+    transition: ease .5s;
+    border-radius: 200px
+}
+
+.back-to-top i {
+    font-size: 1rem;
+    color: #b5e4f9;
+    transition: ease .5s
+}
+
+.back-to-top div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    background-color: #000;
+    padding: .5em;
+    border-radius: 200px
+}
+
+.back-to-top:hover {
+    filter: grayscale(70%)
+}
+
+@media only screen and (max-device-width :768px) {
+
+    /************************* BASE RESPONSIVE ***********************************/
+
+    article {
+        padding: 1em 2%;
+        overflow: hidden
+    }
+
+    /************************* HEADER CONTAINER***********************************/
+
+
+    .welcome-page {
+        display: flex;
+        width: 90%;
+        flex-direction: column-reverse;
+        justify-content: flex-end
+    }
+
+    .welcome-page div {
+        width: 100%;
+        margin: 0
+    }
+
+    .welcome-page figure {
+        width: 80%;
+        margin: 5vh auto 2vh auto;
+        display: flex
+    }
+
+    .welcome-page div h2 {
+        font-size: 1.5em;
+        text-align: center;
+        margin: 0 0 3vh 0
+    }
+
+    .welcome-page div p {
+        font-size: 1em;
+        text-align: center;
+        margin-bottom: 3vh
+    }
+
+    .welcome-page form button {
+        width: 7em;
+        right: .1em
+    }
+
+    /***************************************PRODUCTS FEATURES CONTAINER******************************/
+
+
+    #products-features div div figure,
+    #products-features div div h1,
+    #products-features div div p {
+        margin: .5em 0
+    }
+
+    #products-features .gray-text {
+        width: 90%;
+        margin: .5em auto 2em auto
+    }
+
+    #products-features {
+        padding: 0
+    }
+
+    /*SCROLLER CONTAINER */
+
+
+    .scroll-container {
+        width: 100vw;
+        margin: 0 auto;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory
+    }
+
+    .scroll {
+        display: flex;
+        width: 300vw;
+        height: 25em;
+        justify-content: space-around;
+        margin: 0 auto
+    }
+
+    .scroll div {
+        display: flex;
+        width: 50vw;
+        height: 100%;
+        text-align: center;
+        margin: 0 auto;
+        scroll-snap-align: center
+    }
+
+    /***************************************HOW IT WORKS RESPONSIVE******************************/
+
+    #how-it-works .gray-text {
+        width: 90%
+    }
+
+    /***************************************OUR TEAM RESPONSIVE******************************/
+
+
+    #our-team {
+        padding: 1em 0;
+        overflow: hidden
+    }
+
+    #our-team>h2 {
+        width: 100%;
+        margin: 0 auto
+    }
+
+    #our-team>.gray-text {
+        margin: 0 auto 0 auto;
+        width: 100%
+    }
+
+    .team-card p {
+        display: flex;
+        flex-direction: column
+    }
+
+    /*SCROLLER*/
+
+    .team-scroll-container {
+        all: unset
+    }
+
+    .team-list {
+        all: unset
+    }
+
+    .team-card {
+        all: unset
+    }
+
+    .team-scroll-container {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .team-list {
+        display: flex;
+        justify-content: space-around;
+        outline: 1px dashed lightgray;
+        width: 400vw;
+
+    }
+
+    .team-card {
+        scroll-snap-align: center;
+    }
+
+    /***************************************CLIENTS RESPONSIVE******************************/
+
+    #clients {
+        padding: 0;
+        text-align: center
+    }
+
+    #clients>p {
+        font-size: 1.6em;
+        width: 100%;
+        margin-bottom: 2em
+    }
+
+    .slider-clients-container {
+        width: 100vw
+    }
+
+    /* SLIDER */
+
+    .slider-clients {
+        width: 500vw;
+        display: flex;
+        justify-content: space-around;
+        animation: slider-clients 20s infinite ease-in-out
+    }
+
+    .slider-clients figure:hover {
+        filter: opacity(100%);
+        transform: scale(1)
+    }
+
+    /***************************************PRICING RESPONSIVE ******************************/
+
+
+
+    #pricing {
+        margin: 0
+    }
+
+    .pricing-top {
+        padding: 0;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between
+    }
+
+    .pricing-top div:first-child {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%
+    }
+
+    #pricing>div>div>p {
+        width: 100%
+    }
+
+    .pricing-top>div>div {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2em
+    }
+
+    /*PRICING BOTTOM RESPONSIVE */
+
+
+    .hightlight {
+        margin: 0
+    }
+
+    .promo {
+        margin: 0
+    }
+
+    .formule-scroll-container {
+        overflow: auto;
+        scroll-snap-type: x mandatory
+    }
+
+    .formule-container {
+        width: 300vw;
+        display: flex;
+        justify-content: space-around
+    }
+
+    .formule {
+        background-color: #fff;
+        position: relative;
+        border-radius: 20px;
+        width: 70vw;
+        margin: 2em 0;
+        scroll-snap-align: center
+    }
+
+    /***************************************BLOG RESPONSIVE ******************************/
+
+    #blog-section {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory
+    }
+
+    .blog-container {
+        margin: 2em 15%;
+        width: 30em;
+        position: relative;
+        scroll-snap-align: center
+    }
+}
+
+/*
+CALCUL D'UNE INTERVALLE POUR AVOIR LE TEMPS DE VOIR CHAQUE ITERATION ET QUE LES TRANSITIONS NE SOIENT PAS AGGRESIVE
+
+A = 6.25%
+B = 18.75%
+
+A/2 = 3.125
+B/2 = 9.375
+
+0% - 6.25% (A)
+6.25% - 25% (B)
+25% - 31.25% (A)
+31.25% - 50% (B)
+50% - 56.25% (A)
+56.25% - 75% (B)
+75% - 81.25% (A)
+81.25% - 100% (B)
+100% - 103.125% (A/2)
+103.125% - 112.5% (B/2)
+
+*/
+
+@keyframes slider-clients {
+    0% {
+        transform: translateX(0)
+    }
+
+    23%,
+    5.75% {
+        transform: translateX(-20%)
+    }
+
+    29.75%,
+    47.75% {
+        transform: translateX(-40%)
+    }
+
+    53.75%,
+    71.5% {
+        transform: translateX(-60%)
+    }
+
+    77.75%,
+    95.5% {
+        transform: translateX(-80%)
+    }
+
+    95.5% {
+        transform: translateX(0)
+    }
+}
