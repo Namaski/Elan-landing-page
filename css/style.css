@@ -99,7 +99,7 @@ nav ul li {
 
 nav ul li a {
     font-size: 1em;
-    margin: .3em;
+    margin: 0 0.3em;
     text-decoration: none;
     list-style-type: none;
 }
@@ -121,16 +121,17 @@ nav ul li a:hover {
 /* MENU HAMBURGER */
 
 
-@media only screen and (max-device-width :768px) {
+@media only screen and (max-device-width :1100px) {
     /*PRESET*/
 
 
     nav {
-        display: block
+        display: block;
+        padding: 0 2em
     }
 
     .social-media {
-        display: none
+        display: none;
     }
 
     .mobile-nav {
@@ -228,7 +229,7 @@ nav ul li a:hover {
     /*Lorsque que l'élément parent à la propriété min-height la valeur de référence est 0 ou null pour max-height il faut dont inherit l'height pour remplir l'espace restant*/
     display: flex;
     justify-content: space-between;
-    margin: 10em auto 0 auto;
+    margin: 8em auto 0 auto;
 }
 
 .welcome-page div {
@@ -279,6 +280,109 @@ nav ul li a:hover {
 .welcome-page figure {
     margin: auto 0;
     width: 50%
+}
+
+@media only screen and (max-device-width :1100px) {
+    /*PRESET*/
+
+    .welcome-page{
+        margin: 2em auto 0 auto;
+    }
+
+    nav {
+        display: block;
+        padding: 0 2em
+    }
+
+    .social-media {
+        display: none;
+    }
+
+    .mobile-nav {
+        width: 100%;
+
+    }
+
+    #first-page {
+        margin: 0;
+        padding: 0
+    }
+
+    /*MENU ICON*/
+
+
+    .navbar-toggle {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 20px
+    }
+
+    .navbar-icon {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column
+    }
+
+    .navbar-icon div {
+        width: 3em;
+        height: .5em;
+        margin: .1em;
+        background-color: #fff;
+        border-radius: 200px 200px 200px 200px;
+        -webkit-border-radius: 200px 200px 200px 200px;
+        -moz-border-radius: 200px 200px 200px 200px
+    }
+
+    /*NAVIGATION MENU*/
+
+
+
+    .navbar-menu {
+        display: none
+    }
+
+    .navbar-menu.active {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        flex-direction: column;
+        align-items: end
+    }
+
+    /*STYLE MENU*/
+
+
+    .navbar-menu {
+        width: 95%
+    }
+
+    .navbar-menu li {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        line-height: 300%;
+        font-size: 1.6em;
+        font-weight: 500;
+        width: 60%;
+        background-color: rgba(0, 0, 0, .9);
+        border-left: 2px solid #1294b8ae;
+        border-right: 2px solid #1294b8ae;
+        border-top: 2px solid #1294b8ae
+    }
+
+    .navbar-menu>:first-child {
+        border-radius: 30px 30px 0 0
+    }
+
+    .navbar-menu>:last-child {
+        border-radius: 0 0 30px 30px;
+        border-bottom: 2px solid #1294b8ae
+    }
+
+    .navbar-menu a {
+        display: flex;
+        justify-content: flex-end
+    }
 }
 
 /***************************************Products Features ******************************/
@@ -806,7 +910,7 @@ footer div {
 
 .fa-brands {
     font-size: 1em;
-    margin: .3em .4em
+    margin: 0.3em 0.4em
 }
 
 .brands-container {
@@ -879,7 +983,7 @@ footer div {
 
     .welcome-page {
         display: flex;
-        width: 90%;
+        width: 70%;
         flex-direction: column-reverse;
         justify-content: flex-end
     }
@@ -890,8 +994,8 @@ footer div {
     }
 
     .welcome-page figure {
-        width: 80%;
-        margin: 5vh auto 2vh auto;
+        width: 70%;
+        margin: 0 auto 2vh auto;
         display: flex
     }
 
